@@ -47,7 +47,7 @@ function getHistory(index) {
 
 }
 /**
- * high order fn for navigating
+ * higher order fn for navigating, returns a function
  * @returns a navigation function with a hidden state
  */
 function navigator() {
@@ -181,7 +181,7 @@ const App = (state, fromNavigator) => {
     greeting.innerHTML = Greeting(selectedRover);
 
     if (selectedRover) {
-        getRoverPage(showing, selectedRover);
+        getRoverPage(showing, selectedRover, draw);
         // roverPage
     }
     else {
@@ -295,8 +295,14 @@ function buildRoverDetailsDisplay(ret, displayObj) {
     ret += `</div>`;
     return ret;
 }
-
-function getRoverPage(showing, selectedRover) {
+/**
+ * now a higher order function, takes a functio argument
+ * @param {*} showing 
+ * @param {*} selectedRover 
+ * @param {*} doDraw 
+ * @returns 
+ */
+function getRoverPage(showing, selectedRover, doDraw) {
     let ret = buildRoverPageOpts();
     console.log(`showww`, showing);
     switch (showing) {
@@ -307,7 +313,7 @@ function getRoverPage(showing, selectedRover) {
 
                     ret = buildRoverImageDisplays(ret, datedImages.images);
 
-                    draw(ret);
+                    doDraw(ret);
 
                 })
             break;
@@ -318,7 +324,7 @@ function getRoverPage(showing, selectedRover) {
                     console.log(`details objetc`, detailsObject);
                     ret = buildRoverDetailsDisplay(ret, detailsObject);
 
-                    draw(ret);
+                    doDraw(ret);
 
                 })
 
