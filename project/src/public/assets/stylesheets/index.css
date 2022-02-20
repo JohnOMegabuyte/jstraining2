@@ -5,8 +5,14 @@ body {
   flex-direction: column;
   font-family: Arial;
   min-height: 100vh;
-}
+  background:url('https://wallpapercave.com/wp/MEOaSII.jpg');
+  color: white;
 
+
+}
+rowList{
+  display:flex; justify-content: space-between;
+}
 header {
   /* header styles */
 }
@@ -20,19 +26,62 @@ footer {
   /* footer styles */
 }
 
+imageGrid {
+  background: orangered;
+  background-size: cover;
+  display: flex;
+  margin: 2em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  flex-wrap: wrap;
+}
+listDisplay{
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  margin: 2em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  flex-wrap: wrap;
+}
+
 /* -------------------  TABLET  --------------------- */
 @media (min-width: 768px) {
-  /* use mobile */
+ 
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  background:url('https://wallpapercave.com/wp/MEOaSII.jpg');
+  color: white;
+  min-width: 768px;
+
+}
+
 }
 
 /* -------------------  DESKTOP  -------------------- */
 
 @media (min-width: 1224px) {
-  /* use mobile */
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    background:url('https://wallpapercave.com/wp/MEOaSII.jpg');
+    color: white;
+    min-width: 1224x;
+  
+  }
 }
 
 /* -------------------  LARGE SCREENS  -------------- */
 
 @media (min-width: 1824px) {
-  /* use mobile */
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    background:url('https://wallpapercave.com/wp/MEOaSII.jpg');
+    color: white;
+    min-width: 1824px;
+  
+  }
 }
